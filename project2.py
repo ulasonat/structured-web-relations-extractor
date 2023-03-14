@@ -18,6 +18,8 @@ def main():
     query = sys.argv[7]
     k = sys.argv[8]
 
+    relation_list = ["", "Schools_Attended", "Work_For", "Live_In", "Top_Members"]
+
     # Accessing Google API
     service = build(
         "customsearch", "v1", developerKey=developerKey
@@ -40,7 +42,7 @@ def main():
 
         query = query_list
         # printing the parameters
-        print("Parameters:\nClient key: ", developerKey, "\nEngine key: ", cx, "\nQuery: ", ' '.join(query))
+        print("Parameters:\nClient key: ", developerKey, "\nEngine key: ", cx, "\nOpenAI key: ", openAIKey, "\nMethod: ", extractionMethod, "\nRelation: ", relation_list[relationIndex], "\nThreshold: ", confidenceThreshold, "\nQuery: ", ' '.join(query), "\n# of Tuples: ", k)
         print("\nGoogle Search Results:" + "\n" + "======================")
     
         # if there's less than 10 results (including 0), we simply terminate the program, as per the requirements
@@ -59,6 +61,7 @@ def main():
 
             htmlTitle = htmlTitle.split(" ")
             htmlSnippet = htmlSnippet.split(" ")
+        return
 
 if __name__ == "__main__":
     main()
