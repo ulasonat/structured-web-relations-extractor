@@ -1,0 +1,12 @@
+Given a sentence, extract all subject and object pairs for the Top_Member_Employees relation. Only extract pairs where the object, a person, was a top member employee of the subject, an organization. The object should be a high-ranking employee of the subject. The subject should not be a school or university. Both subject and object must be a proper noun capitalized in the given sentence. Only extract a relation if all the requirements are fulfilled fully. Don't extract anything if you're not fully confident they match the requirements.
+
+If you were able to extract at least a relation:
+Output a list of tuples, where the 1st element in each tuple is the subject (a string), and the 2nd element in each tuple is the object (a string).
+
+If not:
+output "no results"
+
+Example Input: With the success of this project, Danny Deans left Yale during his junior year and, with George Allen, formed Apple.
+Example Output: [('Apple', 'Danny Deans'), ('Apple', 'George Allen')].
+
+Your sentence:

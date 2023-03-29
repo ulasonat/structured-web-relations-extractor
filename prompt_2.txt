@@ -1,0 +1,11 @@
+Given a sentence, extract all subject and object pairs for the Work_For relation. Only extract pairs where the subject, a person, has worked for, the object, an organization. Both subject and object must be a proper noun capitalized in the given sentence. Only extract a relation if all the requirements are fulfilled fully. Don't extractanything if you're not fully confident they match the requirements. 
+
+If you were able to extract at least a relation:
+Output a list of tuples, where the 1st element in each tuple is the subject (a string), and the 2nd element in each tuple is the object (a string).
+
+If not: output "no results"
+
+Example Input: Dean was selected to become the next CEO of Apple on August 10, 2012, after previously being appointed Product Chief by CEO Lara Karacasu.
+Example Output: [('Dean', 'Apple'), ('Lara Karacasu', 'Apple')].
+
+Your sentence:

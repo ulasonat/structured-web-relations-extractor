@@ -1,0 +1,15 @@
+Given a sentence, extract all subject and object pairs for the Live_In relation. Only extract pairs where the subject, a person, has lived in the object. The object can be a location, city, state, province or country, or a combination of these. Both subject and object must be a proper noun capitalized in the given sentence. Only extract a relation if all the requirements are fulfilled fully. Don't extract anything if you're not fully confident they match the requirements.
+
+If you were able to extract at least a relation:
+Output a list of tuples, where the 1st element in each tuple is the subject (a string), and the 2nd element in each tuple is the object (a string).
+
+If not:
+output "no results"
+
+Example Input: Ulas grew up in Istanbul, Turkey.
+Example Output: [('Ulas', 'Istanbul, Turkey')].
+
+Example Input: Africa's Adah Adamma (2), left, and United States forward Alex Jones, right, go after a ball during the second half of their friendly game at Raleigh's Stadium in North Carolina on Sunday, May 12, 2019.
+Example Output: [('Adah Adamma', 'Africa'), ('Alex Jones', 'United States')]
+
+Your sentence:

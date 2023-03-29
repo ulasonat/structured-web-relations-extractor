@@ -1,0 +1,15 @@
+Given a sentence, extract all subject and object pairs for the Schools_Attended relation. Only extract pairs where the subject, a person, attend the object, an organization. Both subject and object must be a proper noun capitalized in the given sentence. Only extract a relation if all the requirements are fulfilled fully. Don't extract anything if you're not fully confident they match the requirements.
+
+If you were able to extract at least a relation:
+Output a list of tuples, where the 1st element in each tuple is the subject (a string), and the 2nd element in each tuple is the object (a string).
+
+If not:
+output "no results"
+
+Example Input: Dean attended Arizona State University, where he launched his startup in February 2010 with his roommate Jeremiah Kelly.
+Example Output: [('Dean', 'Arizona State University'), ('Jeremiah Kelly', 'Arizona State University')].
+
+Example Input: Lara Karacasu studied computer science at Columbia University before moving Dropbox to Irvine, California.
+Example Output: [('Lara Karacasu', 'Columbia University')]
+
+Your sentence:
